@@ -13,25 +13,17 @@
     <h1>Makeup Search App</h1>
     <form action="">
         <input type="text" id="search-input" placeholder="search for product">
-        <button id="search-button">search</button>
+        <button type="button" id="search-button">search</button>
     </form>
 
-    <div class="search-results">
-        <div class="search-res">
-            <img src="https://plus.unsplash.com/premium_photo-1661726457110-c43a88d74567?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWFrZSUyMHVwfGVufDB8fDB8fHww" alt="makeup">
-            <a href="https://unsplash.com/photos/makeup-professional-cosmetics-on-brown-background-flat-lay-top-view-overhead-g7Ez8lUg1jA"
-            target="-blank">makeup</a>
-        </div>
-        <div class="search-res">
-            <img src="https://plus.unsplash.com/premium_photo-1661726457110-c43a88d74567?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWFrZSUyMHVwfGVufDB8fDB8fHww" alt="makeup">
-            <a href="https://unsplash.com/photos/makeup-professional-cosmetics-on-brown-background-flat-lay-top-view-overhead-g7Ez8lUg1jA"
-            target="-blank">makeup</a>
-        </div>
-        <div class="search-res">
-            <img src="https://plus.unsplash.com/premium_photo-1661726457110-c43a88d74567?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWFrZSUyMHVwfGVufDB8fDB8fHww" alt="makeup">
-            <a href="https://unsplash.com/photos/makeup-professional-cosmetics-on-brown-background-flat-lay-top-view-overhead-g7Ez8lUg1jA"
-            target="-blank">makeup</a>
-        </div>
+    <div id="search-results" class="search-results">
+        
+    </div>
+    <div id="product-detail">
+        <h2 id="product-name"></h2>
+        <p id="product-description"></p>
+        <ul id="ingredient-list"></ul>
+        <button id="favorite-btn">Add to Favorites</button>
     </div>
     <button id="load-btn">load more</button>
     <script src="script.js"></script>
