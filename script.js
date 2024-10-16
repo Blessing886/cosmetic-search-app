@@ -13,10 +13,11 @@ searchButton.addEventListener('click', (event) => {
 });
 
 //function to search products
-function searchProducts(inputProduct) {
-    fetch(`${'http://makeup-api.herokuapp.com/api/v1/products.json'}?product_type=${inputProduct}`)
+function searchProducts(query) {
+    fetch(`http://makeup-api.herokuapp.com/api/v1/products.json?product_type=${query}`)
     .then(res => res.json())
     .then(products => {
+        console.log("API Response:", products);
         searchResDiv.innerHTML = '';
         displayResults(products);
     })
@@ -42,7 +43,7 @@ function displayResults(products) {
         productLink.textContent = product.name;
 
         //product-details click eventListener
-        productLink.addEventListener('click', () => productDetails(product));
+        productLink.addEventListener('click', () => showProductDetails(product));
 
         resultDiv.appendChild(img);
         resultDiv.appendChild(productLink);
@@ -50,3 +51,23 @@ function displayResults(products) {
         });
 }
 
+//show product details
+function showProductDetails(product) {
+    const productDetDiv = document.getElementById('product-detail');
+    const productName = document.getElementById('product-name');
+    const productDescription = document.getElementById('product-description');
+    const ingredientList = document.getElementById('ingredient-list');
+
+    productName.textContent = product.name;
+    productDescription.textContent = product.description;
+
+    ingredientList.innerHTML = '';//clear list
+    if (product.product_colors && product.product_colors.length > 0) {
+        product.product_colors.forEach(color => {
+            const li = document.createElement('li');
+            li.textContent = color.colour_name;
+            ingredientList.appendChild(li);
+        });
+    }
+    productDetDiv.style.display = 'block';
+}
