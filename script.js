@@ -71,3 +71,20 @@ function showProductDetails(product) {
     }
     productDetDiv.style.display = 'block';
 }
+//Dynamic search
+//typing event listener
+searchInput.addEventListener('input', () => {
+    const query = searchInput.value.trim();
+    if (query.length > 2) {
+        fetch(`http://makeup-api.herokuapp.com/api/v1/products.json?product_type=${query}`)
+        .then(res => res.json())
+        .then(products => {
+            searchResDiv.innerHTML = '';
+            displayResults(products);
+        })
+        .catch(error => console.error('error fetching suggestions:', error));
+    }
+    else {
+        searchResDiv.innerHTML = '';
+    }
+})
