@@ -1,6 +1,8 @@
 const searchButton = document.getElementById('search-button');
 const searchInput = document.getElementById('search-input');
-const searchResDiv = document.getElementById('search-results')
+const searchResDiv = document.getElementById('search-results');
+const favList = document.getElementById('fav-list');
+let favorites = [];
 
 //eventListener for submission
 searchButton.addEventListener('click', (event) => {
@@ -42,11 +44,16 @@ function displayResults(products) {
         productLink.href = '#';
         productLink.textContent = product.name;
 
+        const favButton = document.createElement('button');
+        favButton.textContent = 'Add to favorites';
+        favButton.addEventListener('click', () => addToFavorites(product));
+
         //product-details click eventListener
         productLink.addEventListener('click', () => showProductDetails(product));
 
         resultDiv.appendChild(img);
         resultDiv.appendChild(productLink);
+        resultDiv.appendChild(favButton);
         searchResDiv.appendChild(resultDiv);
         });
 }
@@ -88,3 +95,34 @@ searchInput.addEventListener('input', () => {
         searchResDiv.innerHTML = '';
     }
 })
+//add favorite to product
+function addToFavorites(product) {
+    if (!favorites.includes(product)) {
+        favorites.push(product);
+        updateFavDisplay();
+    }
+}
+//update favorites display
+function updateFavDisplay() {
+    favList.innerHTML = '';
+    if (favorites.length === 0) {
+        favList.innerHTML = '<p>No Favorites</p>';
+        return;
+    }
+    favorites.forEach(product => {
+        const favDiv = document.createElement('div');
+        favDiv.classList.add('fav-product');
+        
+        const img = document.createElement('img');
+        img.src = product.image_link;
+        img.alt = product.name;
+
+        const productLink = document.createElement('a');
+        productLink.href = '#';
+        productLink.textContent = product.name;
+
+        favDiv.appendChild(img);
+        favDiv.appendChild(productLink);
+        favList.appendChild(favDiv);
+    })
+}
