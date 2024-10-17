@@ -16,3 +16,20 @@ The **Makeup Search App** allows users to search for makeup products with ease. 
 
 ### Installation
 1. Clone the repository:
+https://github.com/Blessing886/cosmetic-search-app.git
+2. Navigate to the "cosmetic-search-app" directory and open the "index.html" file in your browser.
+
+## Usage
+- Type in the serch bar to look for makeup products by product type.
+- Click on a products link to view the products information.
+- Use the favorites feature to add a product to the favorites list.
+
+## API Reference
+This app fetches it data from the[Makeup API] (http://makeup-api.herokuapp.com/). You can learn more about the API [here] (https://makeup-api.herokuapp.com/api/v1/products.json).
+
+## Future Enhancements
+- Adding more search filters like product rating, brand and price range.
+- Improve the dynamic search interactivity.
+- Enable a users favorites list to persist.
+
+## Licence
