@@ -34,7 +34,7 @@ function displayResults(products) {
 
     products.forEach(product => {
         const resultDiv = document.createElement('div');
-        resultDiv.classList.add('search-res');
+        resultDiv.classList.add('image-container');
 
         const img = document.createElement('img')
         img.src = product.image_link;
@@ -116,6 +116,7 @@ function updateFavDisplay() {
         const img = document.createElement('img');
         img.src = product.image_link;
         img.alt = product.name;
+        img.classList.add('fav-img');
 
         const productLink = document.createElement('a');
         productLink.href = '#';
