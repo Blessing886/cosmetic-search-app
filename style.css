@@ -105,21 +105,6 @@ body {
     
   }
 
-
-  #load-btn {
-    background-color: rgb(233, 21, 91);
-    font-size: 18px;
-    border: none;
-    color: #fff;
-    padding: 10px 20px;
-    text-align: center;
-    display: block;
-    margin: 30px auto;
-    border-radius: 5px;
-    cursor: pointer;
-    display: none;
-  }
-
   .image-container {
    display: flex;
    align-items: center;
@@ -169,4 +154,8 @@ body {
 
 .image-container img:hover {
   transform: scale(1.05);
+}
+
+.footer-nav {
+  background: rgb(233, 21, 91);
 }
