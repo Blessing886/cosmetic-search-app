@@ -1,4 +1,5 @@
 # Makeup Search App
+<img src="edited.PNG" width="600px">
 
 ## Overview
 The **Makeup Search App** allows users to search for makeup products with ease. It features a dynamic function that removes the need to click a search button. users can click on a product's link to view detailed information and add products to a favorites list.
