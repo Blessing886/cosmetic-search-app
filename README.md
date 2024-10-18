@@ -1,7 +1,15 @@
 # Makeup Search App
+<img src="edited.PNG">
+
+## Author
+-- [Blessing Moraa](https://github.com/Blessing886)
+
+## Link to live site
+-- (https://blessing886.github.io/cosmetic-search-app/)
+
 
 ## Overview
-The **Makeup Search App** allows users to search for makeup products with ease. It features a dynamic function that removes the need to click a search button. users can click on a product's link to view detailed information and add products to a favorites list.
+The **Makeup Search App** allows users to search for makeup products with ease. It features a dynamic function that removes the need to click a search button. Users can click on a product's link to view detailed information and add products to a favorites list.
 
 ## Technologies Used
 - **HTML**: Structure of the web application.
@@ -33,3 +41,4 @@ This app fetches it data from the[Makeup API] (http://makeup-api.herokuapp.com/)
 - Enable a users favorites list to persist.
 
 ## Licence
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
