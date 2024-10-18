@@ -34,3 +34,4 @@ This app fetches it data from the[Makeup API] (http://makeup-api.herokuapp.com/)
 - Enable a users favorites list to persist.
 
 ## Licence
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
